@@ -33,7 +33,6 @@ background-color: #b4ffc7;
   width: 15rem;
 
 }
-  
 }
 @media only screen and (max-width: 1000px) {
   .quote{
@@ -160,4 +159,128 @@ border-color: #444941;
   height: 20rem;
   width: 15rem;
 
+}
+.dumb{
+  position: absolute;
+  margin: 9rem 70rem 1rem 0rem;
+  height: 15rem;
+  width: 15rem;
+
+}
+
+.mug{
+  position: absolute;
+  margin: 7rem 0rem 0rem 2rem;
+  height: 16.5rem;
+  width: 11rem;
+
+}
+.gbutton{
+  margin-left: 3.5rem;
+}
+#details {
+  margin:1rem 1rem 2rem 15rem;
+}
+.bgcard{
+  background-color: #5F7A61;
+}
+#country-state
+{
+  padding:0.4rem;
+  border-radius: 0.3rem;
+}
+.btnnav{
+
+  width:9rem;
+  padding: -1rem -1rem -1rem -1rem;
+}
+
+.iconbtn{
+  margin:0.5rem;
+}
+input[name="searchsize"]{
+  width: 50%;
+}
+.lbutton{
+  position: fixed;
+  margin: 0rem 1rem 0rem -2rem;
+}
+
+#matter{
+  position: absolute;
+  background: white;
+   color: black;
+   margin: 0rem 0rem 1rem 15rem;
+   border-radius: 1rem;
+   padding: 2rem 3rem 3rem 3rem;
+   width: 78%;
+   height: 28rem;
+   overflow: scroll;
+   border: 1px solid #ccc;
+}
+@media only screen and (max-width: 1000px) {
+.lbutton{
+position: static;
+
+}
+#matter{
+     margin: 0rem 0rem 1rem 1rem;
+     width: 95%;
+  }}
+.matterimg{
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+margin-left: auto;
+margin-right: auto;
+width: 35%;
+
+}
+#matter h1
+{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.2rem;
+
+}
+#matter h2
+{   font-weight: 500;
+    font-size: 1.5rem;
+      padding: 0.2rem;
+}
+#matter p1
+{
+    font-size: 1rem;
+
+}
+
+@media only screen and (max-width: 548px) {
+.mug{
+display: none;
+}
+.nav2profile{
+    position:static;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#details {
+  margin:2rem 1rem 2rem 1rem;
+}
+
+}
+
+.navbar-toggler-icon {
+
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+@media only screen and (min-width: 990px) {
+#lessontopic{
+  display: none;
+  }
+}
+@media only screen and (max-width: 990px) {
+  .lbutton{
+    display: none;
+    }
 }
