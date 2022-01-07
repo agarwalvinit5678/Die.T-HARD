@@ -1,0 +1,91 @@
+body{
+  /* newly added */
+  color: #D5EEBB;
+background-color: #b4ffc7;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+
+.btn{
+  margin-left: 0.5rem;
+ color: #5F7A61;
+}
+.shad{
+  text-shadow: 1px 1px white;
+}
+@media only screen and (min-width: 1000px)
+{
+.quote{
+  color: white;
+  text-shadow: 2px 2px black;
+  font-family: 'Oswald', sans-serif;
+  text-align: right;
+  padding: 7rem 5rem 10rem 24rem;
+  font-size: 2.75rem;
+}
+.t3{
+  position: absolute;
+  margin: 16rem 0rem 1rem 63rem;
+  height: 12rem;
+  width: 15rem;
+
+}
+}
+@media only screen and (max-width: 1000px) {
+  .quote{
+    color: white;
+    text-shadow: 2px 2px black;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    /* margin:1000rem 0.5rem 0.5rem 0.5rem; */
+    padding: 33rem 2rem 50rem 2rem;
+    font-size: 2.75rem;
+  }
+
+
+}
+@media only screen and (max-width: 1240px) {.t3{
+display: none;
+
+}}
+
+.naviga{
+color:black;
+ position: fixed;
+  /* background-color: #7FC8A9; */
+  /* padding-top: 0rem; */
+}
+#navbarl{position: fixed;}
+
+.cook2left{
+  position: absolute;
+  margin-top: 2rem;
+  margin-left: 8.5rem;
+  height: 20rem;
+  width: 15rem;
+}
+.cook2left2{
+  position: absolute;
+  margin-top: 12rem;
+  margin-left: 15rem;
+  height: 20rem;
+  width: 20rem;
+}
+.carousel{
+  height: 20rem;
+  /* width: 50rem; */
+  /* margin-left: 5rem; */
+  /* margin-top: 5rem ; */
+  margin: 15rem 5rem 5rem 5rem;
+}
+footer{
+  /* background-color:#444941; */
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+
+}
