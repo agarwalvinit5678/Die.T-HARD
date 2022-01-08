@@ -443,3 +443,57 @@ display: none;
 .faqhead{
   font-size: 1.5rem;
 }
+but{
+  background-color: white
+  ; /* Green */
+  border: none;
+  color: black;
+  padding: 16px 32px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.gbut:hover{
+  background-color: #809b7b;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.track{
+    padding:0rem 0rem 0rem 9rem ;  
+}
+.align{
+  margin-top: 8rem;
+}
+.flex-container {
+  display: flex;
+}
+.card{
+    background-color: white;
+    margin-top: 4%;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding:3rem 2rem 4rem 2rem;
+
+}
+#rcorners1{
+  border-radius: 15px;
+}
+
+.rotate{
+  writing-mode:vertical-lr ;
+
+  margin-right:1% ;
+  margin-left: 1%;
+  padding:0rem 0rem 0rem 0rem;
+
+}
+
+.piechart1{
+  margin-left: 33%;
+  margin-top: 8%;
+} 
