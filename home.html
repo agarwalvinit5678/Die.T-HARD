@@ -29,6 +29,22 @@
         }
       }
     </script>
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- >>>>>>> 4c1c1acd8e7026ceb2891a9b01f0acba1e7ee284 -->
+     <script src="home.js" charset="utf-8"></script>
+     <script type="JavaScript" src="app.js"></script>
     <style type="text/tailwindcss">
       @layer utilities {
         .content-auto {
@@ -93,14 +109,14 @@
           <div class="md-form mb-5">
             <i class="fas fa-user prefix grey-text"> </i>
 						<label data-error="wrong" data-success="right">Your Name</label>
-            <input type="text" class="form-control validate"  placeholder="Name">
+            <input type="text" class="form-control validate" id="full_name"  placeholder="Name">
 
           </div>
 
           <div class="md-form mb-5">
             <i class="fas fa-envelope prefix grey-text"></i>
 						<label data-error="wrong" data-success="right">Your Email</label>
-            <input type="email" class="form-control validate" placeholder="example@domain.com">
+            <input type="email" class="form-control validate"  id="email" placeholder="example@domain.com">
 
           </div>
 
@@ -108,14 +124,19 @@
           <div class="md-form mb-5">
             <i class="fas fa-lock prefix grey-text"></i>
 						  <label data-error="wrong" data-success="right">Your Password</label>
-            <input type="password" class="form-control validate" placeholder="Remember for future reference">
+            <input type="password" class="form-control validate" id="password" placeholder="Remember for future reference">
 
           </div>
+
+
+              <button class="btn btn-success"  onclick="register()" data-toggle="modal" data-target="#thankyoumodal" >Sign up</button>
+          </div>
+        </div>
         </div>
 
         <div class="modal-footer d-flex justify-content-center">
 
-          <button class="btn btn-success"  data-toggle="modal" data-target="#thankyoumodal">Sign up</button>
+
 
           </div>
         </div>
@@ -138,26 +159,24 @@
           <div class="md-form">
   					  <i class="fas fa-envelope prefix grey-text"></i>
           	<label data-error="wrong" data-success="right">Your Email</label>
-  					<input type="email" class="form-control validate" placeholder="example@domain.com">
+  					<input type="email" class="form-control validate"  id="emaillogin" placeholder="example@domain.com">
 
           </div>
 
           <div class="md-form">
               <i class="fas fa-lock prefix grey-text"></i>
             <label data-error="wrong" data-success="right">Your Password</label>
-  					<input type="password" class="form-control validate">
+  					<input type="password" class="form-control validate" id="passwordlogin">
             <p class="font-small blue-text d-flex justify-content-end"><a href="#" class="blue-text ml-1">Forgot Password?</a></p>
           </div>
 
           <div class="text-center mb-3">
-            <a href="" class="btn btn-success"  data-toggle="modal" data-target="#dabmodal">Sign in<i class="fas fa-sign-in-alt ml-3"></i></a>
+            <a href="" class="btn btn-success"  onclick="login()" data-toggle="modal" data-target="#dabmodal">Sign in<i class="fas fa-sign-in-alt ml-3"></i></a>
 
         </div>
           <p class="font-small dark-grey-text d-flex justify-content-center">or sign in with:</p>
 
           <div class="row my-3 justify-content-center">
-            <button type="button" class="btn btn-outine-primary iconbtn"  data-toggle="modal" data-target="#dabmodal"><i class="fab fa-facebook-f text-center"></i></button>
-            <button type="button" class="btn btn-outline-success iconbtn"  data-toggle="modal" data-target="#dabmodal"><i class="fab fa-twitter text-center"></i></button>
             <button type="button" class="btn btn-outline-danger iconbtn"  data-toggle="modal" data-target="#dabmodal"><i class="fab fa-google-plus-g text-center"></i></button>
           </div>
         </div>
@@ -364,17 +383,23 @@
   </div>
 </div>
 </section> -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- >>>>>>> 4c1c1acd8e7026ceb2891a9b01f0acba1e7ee284 -->
- <script src="home.js" charset="utf-8"></script>
+  <!-- Our script must be loaded after firebase references -->
+  <script src="app.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+
 <footer>
   Made by Terrific Trio
   <class="nav-item">
     <a class="nav-link Contact Us shad" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=diethardcontact@gmail.com" style="color: black">Contact Us</a>
 
 </footer>
-
+<script src="home.js" charset="utf-8"></script>
   </body>
 </html>
