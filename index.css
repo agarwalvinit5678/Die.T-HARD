@@ -18,14 +18,26 @@ background-color: #b4ffc7;
 }
 @media only screen and (min-width: 1000px)
 {
-.quote{
-  color: white;
-  text-shadow: 2px 2px black;
-  font-family: 'Oswald', sans-serif;
-  text-align: right;
-  padding: 7rem 5rem 2rem 2rem;
-  font-size: 2.75rem;
-}
+  .quote{
+    color: white;
+    text-shadow: 2px 2px black;
+    font-family: 'Oswald', sans-serif;
+    text-align: right;
+    padding: 7rem 5rem 2rem 24rem;
+    font-size: 2.75rem;
+  }
+  .text_main p{
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    text-align: right;
+    color: white;
+    text-shadow: 1px 1px black;
+    /* padding: 0rem 1rem 5rem 1rem; */
+    margin-left: 30rem;
+    margin-right: 2rem;
+    margin-bottom: 8rem;
+
+  }
 .t3{
   position: absolute;
   margin: 16rem 0rem 1rem 63rem;
@@ -41,8 +53,17 @@ background-color: #b4ffc7;
     font-family: 'Oswald', sans-serif;
     text-align: center;
     /* margin:1000rem 0.5rem 0.5rem 0.5rem; */
-    padding: 33rem 2rem 50rem 2rem;
+    padding: 33rem 2rem 2rem 2rem;
     font-size: 2.75rem;
+  }
+  .text_main p{
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px black;
+    padding: 0rem 1rem 5rem 1rem;
+
   }
 
 
@@ -315,17 +336,17 @@ display: none;
 {
     background-color: #5F7A61; /* Green */
     color: white;
-  
+
 }
 
 .dropbtn {
-  
+
   background-color: white;
   color: black;
   padding: 16px 42px;
   font-size: 1.5rem;
   border: none;
-  
+
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -383,25 +404,19 @@ display: none;
 
 
 
-.text_main p{
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  text-align: right;
-  color: white;
-  padding: 0rem 2rem 5rem 0rem;
-  
 
-}
 .collapsible {
   background-color: #809b7b;
   color: white;
   cursor: pointer;
   padding: 18px;
   width: 100%;
+  text-shadow: 2px 2px black;
   border: none;
   text-align: left;
   outline: none;
   font-size: 15px;
+  shad
 }
 
 .active, .collapsible:hover {
@@ -414,3 +429,9 @@ display: none;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: #809b7b;}
+#faq{
+  margin:2rem;
+}
+.faqhead{
+  font-size: 1.5rem;
+}
