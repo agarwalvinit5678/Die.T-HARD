@@ -1,6 +1,4 @@
-
-
-var login_value=false;
+var login_value=true;
 if(login_value===false)
 {
   $("#tracker").attr("data-toggle","modal");
