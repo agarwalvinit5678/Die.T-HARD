@@ -32,7 +32,7 @@ Alan ai is also integrated well
 1. Alan ai voice assistant
 2. food databse 
 3. firebase auth 
-4. Health news API 
+4. Indian health news API 
 
 #### frontend
 
