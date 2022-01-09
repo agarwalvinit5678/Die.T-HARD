@@ -1,6 +1,8 @@
 # The Problem Die.t_HARD solves 
 
-With the New Year spirits still going on strong , many Indian users amongt the middle aged suburban demographic have decided to better improve their daily eating habits to suit more of a healthy diet plan . However the main problems arises when they actually get down to make a meal plan . Most of the online resources which aid the formation of a personalized diet plans for its users , are framed to be only useful for foreign markets other than India .Practically speaking for most of the Indian consumers , these applications provide little to no use  at all as the meals in the daily routine barely contain ingredients which the Indian market is familiar with  . So the user is back to aquare one .
+### With the New Year spirits still going on strong , many Indian users amongt the middle aged suburban demographic have decided to better improve their daily eating habits to suit more of a healthy diet plan .
+
+However the main problems arises when they actually get down to make a meal plan . Most of the online resources which aid the formation of a personalized diet plans for its users , are framed to be only useful for foreign markets other than India .Practically speaking for most of the Indian consumers , these applications provide little to no use  at all as the meals in the daily routine barely contain ingredients which the Indian market is familiar with  . So the user is back to aquare one .
 
 # The Idea 
 ## Here at die.t_hard , all the meal prep plans are heavily personalized and customizable to make sure the Indian user attains his/her fitness goals by utilizing local Indian food items for its users  . 
