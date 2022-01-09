@@ -48,3 +48,4 @@ Alan ai is also integrated to provide fundamental informaton about the website t
 2. Design 
 3. Lessons 
 4. Pie chart
+5. All pages are responsive to all screen sizes
