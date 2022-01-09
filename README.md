@@ -18,6 +18,25 @@ Alan ai is also integrated well
 # How it works .
 
 1 . The user should be accustomed with the basics of how to go about making a meal plan with the basic understanding of calories , nutrients , BMR and portion sizes . Hence there is a dedicated lesson page which conveys all this info to its users in the lessons tab which the user can refer to anytime .
+
 2 . Don't like the daily meal plan the algorithm has set up? Don't worry,the daily meal plan can be customized any time where you can choose food from any locality and add any dish according to your liking!
+
 3 . Our rating system teaches us about your liking so we can improve our recommendations. 
+
 4 . Whether it's due to diet requirements, limited time for cooking, or just a desire to keep things simple, recurring dishes allow you to put your favorite foods and meals on repeat.
+
+# Tech Behind it
+
+### backend 
+
+1. Alan ai voice assistant
+2. food databse 
+3. firebase auth 
+4. Health news API 
+
+#### frontend
+
+1. UI 
+2. Design 
+3. Lessons 
+4. Pie chart
