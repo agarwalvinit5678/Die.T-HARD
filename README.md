@@ -1,3 +1,6 @@
+Idea Documentation
+https://trello.com/b/SipBkVBx/dotslash-50
+
 # The Problem Die.t_HARD solves 
 
 ### With the New Year spirits still going on strong , many Indian users amongt the middle aged suburban demographic have decided to better improve their daily eating habits to suit more of a healthy diet plan .
