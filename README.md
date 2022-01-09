@@ -21,6 +21,8 @@ Not only that but a lot of these apps have a UI which could only be described as
 
 The key focus of thought for our website is that we understand the diversity of Indian cuisines and how intimately the cultural identity of each and every state is tied up with its cuisines and food .Thus , we have categorized the Indian dishes into local ,  state wise dishes . The user can choose from a wide variety of dishes of his/her own preferred locality (Maharastrian , Gujarathi , Goan etc) and the algorithm sets up their meal plan amongst the chosen category with caloric and macro nutrient constraints in the form of a graph . 
 
+The UI which has been adopted has a particularly soft and "friendly" feel to it which has been added to psychologically ease the user and to present the meal plan in a more user frinedly manner which also , shifts from the usual meal prep resorces' stereotypical "young meathead" undertone image which surprisinginly solves one of the main issues that the targetted demographic faces -> a psychological barrier and the disconnect they experience with other software resources .
+
 Alan ai is also integrated to provide fundamental informaton about the website to the users .
 
 # How it works .
@@ -48,4 +50,3 @@ Alan ai is also integrated to provide fundamental informaton about the website t
 2. Design 
 3. Lessons 
 4. Pie chart
-5. All pages are responsive to all screen sizes
