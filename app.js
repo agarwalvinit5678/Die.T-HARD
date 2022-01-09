@@ -50,6 +50,7 @@ firebase.initializeApp(firebaseConfig);
 // Initialize variables
 const auth = firebase.auth()
 const database = firebase.database()
+const signInWithGoogleBtn = document.getElementById('signInWithGoogle');
 
 // Set up our register function
 function register () {
