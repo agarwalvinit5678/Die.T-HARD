@@ -93,7 +93,7 @@
   <div class="modal fade" id="signupPage">
       <div class="modal-dialog">
         <div class="modal-content">
-  
+            <form method="POST" action="/register">
           <div class="modal-header text-center">
             <h4 class="modal-title text-center w-100 font-weight-bold">Sign Up</h4>
             <button type="button" class="close" data-dismiss="modal" aria-lable="close">&times;</button>
@@ -102,14 +102,14 @@
             <div class="md-form mb-5">
               <i class="fas fa-user prefix grey-text"> </i>
                           <label data-error="wrong" data-success="right">Your Name</label>
-              <input type="text" class="form-control validate"  placeholder="Name">
+              <input type="text" name="name" class="form-control validate"  placeholder="Name">
   
             </div>
   
             <div class="md-form mb-5">
               <i class="fas fa-envelope prefix grey-text"></i>
                           <label data-error="wrong" data-success="right">Your Email</label>
-              <input type="email" class="form-control validate" placeholder="example@domain.com">
+              <input type="email" name="username" class="form-control validate" placeholder="example@domain.com">
   
             </div>
   
@@ -117,17 +117,18 @@
             <div class="md-form mb-5">
               <i class="fas fa-lock prefix grey-text"></i>
                             <label data-error="wrong" data-success="right">Your Password</label>
-              <input type="password" class="form-control validate" placeholder="Remember for future reference">
+              <input type="password" name="password" class="form-control validate" placeholder="Remember for future reference">
   
             </div>
           </div>
   
           <div class="modal-footer d-flex justify-content-center">
   
-            <button class="btn btn-success"  data-toggle="modal" data-target="#thankyoumodal">Sign up</button>
+            <button class="btn btn-success"  type="submit" data-toggle="modal" data-target="#thankyoumodal">Sign up</button>
   
             </div>
           </div>
+        </form>
         </div>
       </div>
     </div>
@@ -135,8 +136,9 @@
     <!--content of signin page-->
   
     <div class="modal fade" id="signinPage">
-      <div class="modal-dialog">
+            <div class="modal-dialog">
         <div class="modal-content">
+          <form method="POST" action="/login">
   
           <div class="modal-header text-center">
             <h3 class="modal-title w-100 dark-grey-text font-weight-bold">Sign In</h3>
@@ -147,19 +149,19 @@
             <div class="md-form">
                           <i class="fas fa-envelope prefix grey-text"></i>
                 <label data-error="wrong" data-success="right">Your Email</label>
-                        <input type="email" class="form-control validate" placeholder="example@domain.com">
+                        <input type="email" name="username" class="form-control validate" placeholder="example@domain.com">
   
             </div>
   
             <div class="md-form">
                 <i class="fas fa-lock prefix grey-text"></i>
               <label data-error="wrong" data-success="right">Your Password</label>
-                        <input type="password" class="form-control validate">
+                        <input type="password" name="password" class="form-control validate">
               <p class="font-small blue-text d-flex justify-content-end"><a href="#" class="blue-text ml-1">Forgot Password?</a></p>
             </div>
   
             <div class="text-center mb-3">
-              <a href="" class="btn btn-success"  data-toggle="modal" data-target="#dabmodal">Sign in<i class="fas fa-sign-in-alt ml-3"></i></a>
+              <button type="submit" class="btn btn-success"  data-toggle="modal" data-target="#dabmodal">Sign in<i class="fas fa-sign-in-alt ml-3"></i></button>
   
           </div>
             <p class="font-small dark-grey-text d-flex justify-content-center">or sign in with:</p>
@@ -171,6 +173,7 @@
             </div>
           </div>
         </div>
+      </form>
         </div>
       </div>
   
