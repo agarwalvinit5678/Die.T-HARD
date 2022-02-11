@@ -1,6 +1,6 @@
 //jshint esversion:6
 
-
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 var _ = require('lodash');
@@ -9,9 +9,12 @@ const mongoose=require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
-
-``
-
+const jsdom = require('jsdom');
+const dom = new jsdom.JSDOM("/partial/header.ejs");
+const $ = require('jquery')(dom.window);
+var login_value=false;
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const findOrCreate=require('mongoose-findorcreate');
 const app = express();
 app.use(session({
   secret:"this is secret",
@@ -24,10 +27,16 @@ mongoose.connect("mongodb+srv://orderof3:Terrific%40trio@diethard.sjjzz.mongodb.
 const userSchema=new mongoose.Schema({
   name:String,
   email: String,
-  password: String
+  password: String,
+  googleId:String,
+  state: String,
+  height: Number,
+  weight: Number,
+
 });
 
 userSchema.plugin(passportLocalMongoose);
+userSchema.plugin(findOrCreate);
 // requires the model with Passport-Local Mongoose plugged in
 const User = new mongoose.model("User",userSchema);
 
@@ -35,49 +44,94 @@ const User = new mongoose.model("User",userSchema);
 passport.use(User.createStrategy());
 
 // use static serialize and deserialize of model for passport session support
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+passport.serializeUser(function(user,done){
+  done(null,user.id);
+});
+passport.deserializeUser(function(id,done){
+  User.findById(id,function(err,user)
+  {
+    done(err,user);
+  });
+});
 
+passport.use(new GoogleStrategy({
+  clientID: process.env.GOOGLE_CLIENT_ID,
+  clientSecret:  process.env.GOOGLE_CLIENT_SECRET,
+  callbackURL: "http://localhost:3000/auth/google/DietHard",
+  //  userProfileURL:"https://www.googleapis.com/oauth2/v3/userinfo"
+},
 
+function(accessToken, refreshToken, profile, cb) {
+  console.log(profile);
+  User.findOrCreate({ googleId: profile.id }, function (err, user) {
+    return cb(err, user);
+  });
+}
+));
 
 
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
-
+app.get("/auth/google",passport.authenticate('google',{scope:["profile"]}));
+app.get('/auth/google/DietHard', 
+  passport.authenticate('google', { failureRedirect: '/login' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/');
+  });
 app.get("/",function(req,res){
-res.render("home");
+ 
+res.render("home",{login_value:req.isAuthenticated()});
 });
 app.get("/lessons",function(req,res){
-  res.render("lessons");
+  res.render("lessons",{login_value:req.isAuthenticated()});
   
 });
 
 app.get("/goal",function(req,res){
-  res.render("goal");
+  if(req.isAuthenticated()){
+    
+    res.render("goal",{login_value:req.isAuthenticated()});
+  }
+  else{
+    res.redirect("/");
+  }    
   
-});
+  });
 
 
 app.get("/profile",function(req,res){
     if(req.isAuthenticated()){
-      console.log(User.name);
-      res.render("profile",{name:User.name});
+      
+      res.render("profile",{name:req.user.name,weight:req.user.weight,login_value:req.isAuthenticated()});
     }
     else{
       res.redirect("/");
     }    
     
     });
-        
-app.get("/tracker",function(req,res){
-  res.render("tracker");
+
+app.post("/profile",function(req,res){
+    req.user.name=req.body.name;
+res.redirect("/profile");
+
 });
+app.get("/tracker",function(req,res){
+  if(req.isAuthenticated()){
+    
+    res.render("tracker",{login_value:req.isAuthenticated()});
+  }
+  else{
+    res.redirect("/");
+  }    
+  
+  });       
 
 app.post("/register",function(req,res){
         
-User.register({name:req.body.name, username:req.body.username, active: false}, req.body.password, function(err, user) {
+  User.register({name:req.body.name, username:req.body.username, active: false}, req.body.password, function(err, user) {
   if (err) { console.log(err);
   res.redirect("/");}
   else{
