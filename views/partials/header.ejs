@@ -51,13 +51,13 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
   
           <li class="nav-item">
-            <a class="nav-link Tracker shad" id="tracker"  href=tracker data-toggle="modal" data-target="#signinPage" style="color: black">Nutrient Tracker</a>
+            <a class="nav-link Tracker shad" id="tracker"  href="/tracker"  style="color: black">Nutrient Tracker</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link Your Goals shad" id= "goal" href=goal data-toggle="modal" data-target="#signinPage" style="color: black">Your Goals</a>
+            <a class="nav-link Your Goals shad" id= "goal" href="/goal" style="color: black">Your Goals</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link shad" id=""  href=lessons style="color: black">Lessons</a>
+            <a class="nav-link shad" id=""  href="/lessons" style="color: black">Lessons</a>
             <section id="lessontopic">
               <li>
                  <a class="" id="tracker"  href=#lesson1  style="color: black">  1.The BasicsFood & Calories </a>
@@ -82,7 +82,7 @@
   
     <a href="" class="btn btn-success btnnav" id="signupbtn" data-toggle="modal" data-target="#signupPage">Sign up<i class="fas fa-user-plus ml-3"></i></a>
     <a href="" class="btn btn-success btnnav" id="signinbtn" data-toggle="modal" data-target="#signinPage">Sign in<i class="fas fa-sign-in-alt ml-3"></i></a>
-    <a id ="profile" href=profile data-toggle="modal" data-target="#signinPage" btnnav" class="btn btn-success" ><i class="fas fa-user-tie"></i></a>
+    <a id ="profile" href="/profile"  class="btn btn-success" ><i class="fas fa-user-tie"></i></a>
   
         </form>
   
@@ -127,7 +127,8 @@
             <button class="btn btn-success"  type="submit" data-toggle="modal" data-target="#thankyoumodal">Sign up</button>
   
             </div>
-          </div>
+            
+          
         </form>
         </div>
       </div>
@@ -169,7 +170,7 @@
             <div class="row my-3 justify-content-center">
               <button type="button" class="btn btn-outine-primary iconbtn"  data-toggle="modal" data-target="#dabmodal"><i class="fab fa-facebook-f text-center"></i></button>
               <button type="button" class="btn btn-outline-success iconbtn"  data-toggle="modal" data-target="#dabmodal"><i class="fab fa-twitter text-center"></i></button>
-              <button type="button" class="btn btn-outline-danger iconbtn"  data-toggle="modal" data-target="#dabmodal"><i class="fab fa-google-plus-g text-center"></i></button>
+              <a href="/auth/google" type="button" class="btn btn-outline-danger iconbtn"  ><i class="fab fa-google-plus-g text-center"></i></a>
             </div>
           </div>
         </div>
