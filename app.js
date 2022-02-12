@@ -108,7 +108,7 @@ app.get("/goal",function(req,res){
 app.get("/profile",function(req,res){
     if(req.isAuthenticated()){
       
-      res.render("profile",{name:req.user.name,weight:req.user.weight,height:req.user.height,age:req.user.age,email:req.user.username,state:req.user.state,gender:req.user.gender,allergens:req.user.allegens,login_value:req.isAuthenticated()});
+      res.render("profile",{name:req.user.name,weight:req.user.weight,height:req.user.height,age:req.user.age,email:req.user.username,state:req.user.state,gender:req.user.gender,allergens:req.user.allergens,login_value:req.isAuthenticated()});
     }
     else{
       res.redirect("/");
@@ -117,13 +117,12 @@ app.get("/profile",function(req,res){
     });
 
 app.post("/profile",function(req,res){
-  console.log(req.user);
-    req.users.findOneAndUpdate({name:req.user.name}, {name:req.body.name}, function(err, doc) {
-    if(err) return console.log(err);
-    res.send(doc);
-});
+  console.log(req.body.gender);
+    User.findOneAndUpdate({_id:req.user._id}, {name:req.body.name,weight:req.body.weight,height:req.body.height,age:req.body.age,email:req.body.username,state:req.body.state,gender:req.body.gender,allergens:req.body.allergens,username:req.body.username},{new:true}, function(err, doc) {
+    if(err) return console.log(err);});
   // req.user.name=req.body.name;
-   //console.log(req.body.allergens);
+   console.log(req.body.allergens);
+   console.log(req.user.allergens);
 res.redirect("/profile");
 
 });
