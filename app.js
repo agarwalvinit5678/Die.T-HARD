@@ -32,6 +32,9 @@ const userSchema=new mongoose.Schema({
   state: String,
   height: Number,
   weight: Number,
+  age: Number,
+  gender: String,
+  allergens: Array
 
 });
 
@@ -63,7 +66,7 @@ passport.use(new GoogleStrategy({
 
 function(accessToken, refreshToken, profile, cb) {
   console.log(profile);
-  User.findOrCreate({ googleId: profile.id }, function (err, user) {
+  User.findOrCreate({ googleId: profile.id,name:profile.displayName, }, function (err, user) {
     return cb(err, user);
   });
 }
@@ -105,7 +108,7 @@ app.get("/goal",function(req,res){
 app.get("/profile",function(req,res){
     if(req.isAuthenticated()){
       
-      res.render("profile",{name:req.user.name,weight:req.user.weight,login_value:req.isAuthenticated()});
+      res.render("profile",{name:req.user.name,weight:req.user.weight,height:req.user.height,age:req.user.age,email:req.user.username,state:req.user.state,gender:req.user.gender,allergens:req.user.allegens,login_value:req.isAuthenticated()});
     }
     else{
       res.redirect("/");
@@ -114,7 +117,13 @@ app.get("/profile",function(req,res){
     });
 
 app.post("/profile",function(req,res){
-    req.user.name=req.body.name;
+  console.log(req.user);
+    req.users.findOneAndUpdate({name:req.user.name}, {name:req.body.name}, function(err, doc) {
+    if(err) return console.log(err);
+    res.send(doc);
+});
+  // req.user.name=req.body.name;
+   //console.log(req.body.allergens);
 res.redirect("/profile");
 
 });
@@ -131,7 +140,7 @@ app.get("/tracker",function(req,res){
 
 app.post("/register",function(req,res){
         
-  User.register({name:req.body.name, username:req.body.username, active: false}, req.body.password, function(err, user) {
+  User.register({name:req.body.name,weight:null,height:null,age:null,email:req.body.username,username:req.body.username,state:"",gender:"",allergens:[], active: false}, req.body.password, function(err, user) {
   if (err) { console.log(err);
   res.redirect("/");}
   else{
