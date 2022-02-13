@@ -34,7 +34,8 @@ const userSchema=new mongoose.Schema({
   weight: Number,
   age: Number,
   gender: String,
-  allergens: Array
+  allergens: Array,
+  bmr:Number
 
 });
 
@@ -118,11 +119,27 @@ app.get("/profile",function(req,res){
 
 app.post("/profile",function(req,res){
   console.log(req.body.gender);
-    User.findOneAndUpdate({_id:req.user._id}, {name:req.body.name,weight:req.body.weight,height:req.body.height,age:req.body.age,email:req.body.username,state:req.body.state,gender:req.body.gender,allergens:req.body.allergens,username:req.body.username},{new:true}, function(err, doc) {
+ 
+  if(req.body.allergens==undefined)
+  var allerging=[];
+  else 
+  var allerging=req.body.allergens;
+  var Bmr=0;
+  if(req.user.gender=="M")
+  {
+    Bmr=88.262+(13.397*req.user.weight)+(4.799*req.user.height)-(5.677*req.user.age);
+  }
+  else
+  {
+     Bmr=447.593+(9.247*req.user.weight)+(3.098*req.user.height)-(4.330*req.user.age);
+  }
+    User.findOneAndUpdate({_id:req.user._id}, {name:req.body.name,weight:req.body.weight,height:req.body.height,age:req.body.age,email:req.body.username,state:req.body.state,gender:req.body.gender,allergens:allerging,username:req.body.username, bmr:Bmr},{new:true}, function(err, doc) {
     if(err) return console.log(err);});
   // req.user.name=req.body.name;
-   console.log(req.body.allergens);
-   console.log(req.user.allergens);
+  
+  //console.log(bmr);
+   //console.log(req.body.allergens);
+   console.log(res.user);
 res.redirect("/profile");
 
 });
