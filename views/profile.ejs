@@ -38,78 +38,61 @@
                  <div class="col-lg-6">
                    <div class="form-group">
                      <label class="form-control-label" for="input-email">Email address</label>
-                     <input type="email" id="input-email" class="form-control form-control-alternative" name="email" placeholder="example@domain.com" value="<%= email %> ">
+                     <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="example@domain.com" value="<%= email %> ">
                    </div>
                  </div>
                </div>
-               <div class="row">
-                 <div class="col-lg-6">
-                   <div class="form-group focused">
-                     <label class="form-control-label" for="input-first-name">First name</label>
-                     <input type="text" id="input-first-name" class="form-control form-control-alternative"  placeholder="First name" >
-                   </div>
-                 </div>
-                 <div class="col-lg-6">
-                   <div class="form-group focused">
-                     <label class="form-control-label" for="input-last-name">Last name</label>
-                     <input type="text" id="input-last-name" class="form-control form-control-alternative"  placeholder="Last name" >
-                   </div>
-                 </div>
-               </div>
+               
              </div>
              <hr class="my-4">
-             <!-- Address -->
+             
 
              <div class="pl-lg-4">
                <div class="row">
-                 <div class="col-md-7">
-                   <div class="form-group focused">
-                     <label class="form-control-label" for="input-address">Address</label>
-                     <input id="input-address" class="form-control form-control-alternative"  placeholder="Home Address"   type="text">
-                   </div>
-                 </div>
+                
                  <div class="col-lg-4">
           <div class="form-group focused">
             <label class="form-control-label" for="input-city">State</label>
             <!--- India states -->
-<select id="country-state" name="country-state">
-    <option value="AN">Andaman and Nicobar Islands</option>
-    <option value="AP">Andhra Pradesh</option>
-    <option value="AR">Arunachal Pradesh</option>
-    <option value="AS">Assam</option>
-    <option value="BR">Bihar</option>
-    <option value="CH">Chandigarh</option>
-    <option value="CT">Chhattisgarh</option>
-    <option value="DN">Dadra and Nagar Haveli</option>
-    <option value="DD">Daman and Diu</option>
-    <option value="DL">Delhi</option>
-    <option value="GA">Goa</option>
-    <option value="GJ">Gujarat</option>
-    <option value="HR">Haryana</option>
-    <option value="HP">Himachal Pradesh</option>
-    <option value="JK">Jammu and Kashmir</option>
-    <option value="JH">Jharkhand</option>
-    <option value="KA">Karnataka</option>
-    <option value="KL">Kerala</option>
-    <option value="LA">Ladakh</option>
-    <option value="LD">Lakshadweep</option>
-    <option value="MP">Madhya Pradesh</option>
-    <option value="MH">Maharashtra</option>
-    <option value="MN">Manipur</option>
-    <option value="ML">Meghalaya</option>
-    <option value="MZ">Mizoram</option>
-    <option value="NL">Nagaland</option>
-    <option value="OR">Odisha</option>
-    <option value="PY">Puducherry</option>
-    <option value="PB">Punjab</option>
-    <option value="RJ">Rajasthan</option>
-    <option value="SK">Sikkim</option>
-    <option value="TN">Tamil Nadu</option>
-    <option value="TG">Telangana</option>
-    <option value="TR">Tripura</option>
-    <option value="UP">Uttar Pradesh</option>
-    <option value="UT">Uttarakhand</option>
-    <option value="WB">West Bengal</option>
+    <select id="country-state" name="country-state" value="<%state%>">
+    <option  <%= state == "" ? 'selected' : ''%> value="">Select</option>
+    <option <%= state == "AN" ? 'selected' : ''%> value="AN">Andaman and Nicobar Islands</option>
+    <option <%= state == "AR" ? 'selected' : ''%> value="AR">Arunachal Pradesh</option>
+    <option <%= state == "AS" ? 'selected' : ''%> value="AS">Assam</option>
+    <option <%= state == "AP" ? 'selected' : ''%> value="AP">Andhra Pradesh</option>
+    <option <%= state == "BR" ? 'selected' : ''%> value="BR">Bihar</option>
+    <option <%= state == "CH" ? 'selected' : ''%> value="CH">Chandigarh</option>
+    <option <%= state == "CT" ? 'selected' : ''%> value="CT">Chhattisgarh</option>
+    <option <%= state == "DN" ? 'selected' : ''%> value="DN">Dadra and Nagar Haveli</option>
+    <option <%= state == "DD" ? 'selected' : ''%> value="DD">Daman and Diu</option>
+    <option <%= state == "DL" ? 'selected' : ''%> value="DL">Delhi</option>
+    <option <%= state == "GA" ? 'selected' : ''%> value="GA">Goa</option>
+    <option <%= state == "GJ" ? 'selected' : ''%> value="GJ">Gujarat</option>
+    <option <%= state == "HR" ? 'selected' : ''%> value="HR">Haryana</option>
+    <option <%= state == "HP" ? 'selected' : ''%> value="HP">Himachal Pradesh</option>
+    <option <%= state == "JK" ? 'selected' : ''%> value="JK">Jammu and Kashmir</option>
+    <option <%= state == "JH" ? 'selected' : ''%> value="JH">Jharkhand</option>
+    <option <%= state == "KA" ? 'selected' : ''%> value="KA">Karnataka</option>
+    <option <%= state == "KL" ? 'selected' : ''%> value="KL">Kerala</option>
+    <option <%= state == "LA" ? 'selected' : ''%> value="LA">Ladakh</option>
+    <option <%= state == "LD" ? 'selected' : ''%> value="LD">Lakshadweep</option>
+    <option <%= state == "MP" ? 'selected' : ''%> value="MP">Madhya Pradesh</option>
+    <option <%= state == "MH" ? 'selected' : ''%> value="MH">Maharashtra</option>
+    <option <%= state == "MN" ? 'selected' : ''%> value="MN">Manipur</option>
+    <option <%= state == "ML" ? 'selected' : ''%> value="ML">Meghalaya</option>
+    <option <%= state == "MZ" ? 'selected' : ''%> value="MZ">Mizoram</option>
+    <option <%= state == "NL" ? 'selected' : ''%> value="NL">Nagaland</option>
+    <option <%= state == "OR" ? 'selected' : ''%> value="OR">Odisha</option>
+    <option <%= state == "PY" ? 'selected' : ''%> value="PY">Puducherry</option>
+    <option <%= state == "PB" ? 'selected' : ''%> value="PB">Punjab</option>
+    <option <%= state == "RJ" ? 'selected' : ''%> value="RJ">Rajasthan</option>
+    <option <%= state == "SK" ? 'selected' : ''%> value="SK">Sikkim</option>
+    <option <%= state == "TN" ? 'selected' : ''%> value="TN">Tamil Nadu</option>
+    <option <%= state == "TG" ? 'selected' : ''%> value="TG">Telangana</option>
+    <option <%= state == "TR" ? 'selected' : ''%> value="TR">Tripura</option>
+    <option <%= state == "UP" ? 'selected' : ''%> value="UP">Uttar Pradesh</option>
+    <option <%= state == "UT" ? 'selected' : ''%> value="UT">Uttarakhand</option>
+    <option <%= state == "WB" ? 'selected' : ''%> value="WB">West Bengal</option>
 </select>
 </div>
         </div>
@@ -120,30 +103,31 @@
                  <div class="col-lg-3">
                    <div class="form-group focused">
                      <label class="form-control-label" for="input-city">Height</label>
-                     <input type="number" id="input-city" class="form-control form-control-alternative" placeholder="Height (cms)" name="height" value="<%= height %>">
+                     <input type="number" id="input-city" class="form-control form-control-alternative" name="height" placeholder="Height (cms)" value=<%=height%>>
                    </div>
                  </div>
                  <div class="col-lg-3">
                    <div class="form-group focused">
                      <label class="form-control-label" for="input-country">Weight</label>
-                     <input type="number" id="input-country" class="form-control form-control-alternative" placeholder="Weight (kg)" name="weight" value="<%= weight %>">
+                     <input type="number" id="input-country" class="form-control form-control-alternative" name="weight" placeholder="Weight (kg)" name="weight" value=<%= weight %>>
                    </div>
                  </div>
                  <div class="col-lg-3">
                    <div class="form-group focused">
                      <label class="form-control-label" for="input-age">Age</label>
-                     <input type="number" id="input-age" class="form-control form-control-alternative" placeholder="Age(years)" name="age" value="<%= age %>">
+                     <input type="number" id="input-age" class="form-control form-control-alternative" name="age"placeholder="Age(years)" value=<%=age%>>
                    </div>
                  </div>
 
-                 <div class="col-lg-2 ">
+                 <div class="col-lg-3 ">
           <div class="form-group focused">
             <label class="form-control-label" for="input-city">Gender</label>
             <!--- Gender -->
-<select id="country-state" name="country-state">
-    <option value="M">Male</option>
-    <option value="F">Female</option>
-    <option value="O">Other</option>
+<select id="gender" name="gender">
+    <option <%= gender == "" ? 'selected' : ''%> value="">Select</option>
+    <option <%= gender == "M" ? 'selected' : ''%>value="M">Male</option>
+    <option <%= gender == "F" ? 'selected' : ''%>value="F">Female</option>
+    <option <%= gender == "O" ? 'selected' : ''%>value="O">Other</option>
 
 </select>
 </div>
@@ -152,35 +136,36 @@
 
                </div>
                  <hr class="my-4">
+                 
                 <label class="form-control-label" for="input-city">Common Allergies</label>
                <div class="list-group list-group-horizontal-md">
                  <label class="list-group-item">
-                   <input class="form-check-input me-1" type="checkbox" value="">
+                   <input class="form-check-input me-1" name="allergens" type="checkbox" value="Gluten">
                    Gluten
                  </label>
 
                  <label class="list-group-item">
-                   <input class="form-check-input me-1" type="checkbox" value="">
+                   <input class="form-check-input me-1" name="allergens" type="checkbox" value="Eggs">
                   Eggs
                  </label>
                  <label class="list-group-item">
-                   <input class="form-check-input me-1" type="checkbox" value="">
+                   <input class="form-check-input me-1" name="allergens" type="checkbox" value="Fish">
                    Fish
                  </label>
                  <label class="list-group-item">
-                   <input class="form-check-input me-1" type="checkbox" value="">
+                   <input class="form-check-input me-1" name="allergens" type="checkbox" value="Nuts">
                   Nuts
                  </label>
                  <label class="list-group-item">
-                   <input class="form-check-input me-1" type="checkbox" value="">
+                   <input class="form-check-input me-1" name="allergens" type="checkbox" value="Dairy">
                   Dairy
                  </label>
                  <label class="list-group-item">
-                   <input class="form-check-input me-1" type="checkbox" value="">
+                   <input class="form-check-input me-1" name="allergens" type="checkbox" value="Soy">
                   Soy
                  </label>
                  <label class="list-group-item">
-                   <input class="form-check-input me-1" type="checkbox" value="">
+                   <input class="form-check-input me-1" name="allergens" type="checkbox" value="ShellFish">
                    Shell Fish
                  </label>
                </div>
