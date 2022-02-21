@@ -181,6 +181,9 @@ border-color: #444941;
   margin: -20rem 0rem 1rem 64rem;
   height: 20rem;
   width: 15rem;
+  top: 100%;
+  left: 30px;
+  
 
 }
 .dumb{
@@ -406,7 +409,18 @@ display: none;
 } */
 
 
+header{
+  margin-top: 0%;
+}
+#my_container{
+    
+  width: 50%;    
+  margin: auto;
+  
+  background-color:#CEE6B4;
+  color: #444941;
 
+}
 
 .collapsible {
   background-color: #809b7b;
