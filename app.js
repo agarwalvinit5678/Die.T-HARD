@@ -29,13 +29,16 @@ const userSchema=new mongoose.Schema({
   email: String,
   password: String,
   googleId:String,
-  state: String,
+  cuisine: String,
   height: Number,
   weight: Number,
   age: Number,
   gender: String,
   allergens: Array,
-  bmr:Number
+  bmr:Number,
+  activitylevel: String,
+  goal:String,
+  split:String,
 
 });
 
@@ -109,7 +112,7 @@ app.get("/goal",function(req,res){
 app.get("/profile",function(req,res){
     if(req.isAuthenticated()){
       
-      res.render("profile",{name:req.user.name,weight:req.user.weight,height:req.user.height,age:req.user.age,email:req.user.username,state:req.user.state,gender:req.user.gender,allergens:req.user.allergens,login_value:req.isAuthenticated()});
+      res.render("profile",{goal:req.user.goal,split:req.user.split,name:req.user.name,weight:req.user.weight,height:req.user.height,age:req.user.age,email:req.user.username,cuisine:req.user.cuisine,gender:req.user.gender,allergens:req.user.allergens,activitylevel:req.user.activitylevel,login_value:req.isAuthenticated()});
     }
     else{
       res.redirect("/");
@@ -144,7 +147,7 @@ app.post("/profile",function(req,res){
   {
      Bmr=447.593+(9.247*req.user.weight)+(3.098*req.user.height)-(4.330*req.user.age);
   }
-    User.findOneAndUpdate({_id:req.user._id}, {name:req.body.name,weight:req.body.weight,height:req.body.height,age:req.body.age,email:req.body.username,state:req.body.state,gender:req.body.gender,allergens:allerging,username:req.body.username, bmr:Bmr},{new:true}, function(err, doc) {
+    User.findOneAndUpdate({_id:req.user._id}, {split:req.body.split,goal:req.body.goal,name:req.body.name,activitylevel:req.body.activitylevel,weight:req.body.weight,height:req.body.height,age:req.body.age,email:req.body.username,cuisine:req.body.cuisine,gender:req.body.gender,allergens:allerging,username:req.body.username, bmr:Bmr},{new:true}, function(err, doc) {
     if(err) return console.log(err);});
   // req.user.name=req.body.name;
   
@@ -167,7 +170,7 @@ app.get("/tracker",function(req,res){
 
 app.post("/register",function(req,res){
         
-  User.register({name:req.body.name,weight:null,height:null,age:null,email:req.body.username,username:req.body.username,state:"",gender:"",allergens:[], active: false}, req.body.password, function(err, user) {
+  User.register({split:"",name:req.body.name,weight:null,height:null,age:null,email:req.body.username,username:req.body.username,goal:"",activitylevel:"",cuisine:"",gender:"",allergens:[], active: false}, req.body.password, function(err, user) {
   if (err) { console.log(err);
   res.redirect("/");}
   else{
