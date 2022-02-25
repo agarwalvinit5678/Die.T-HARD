@@ -29,6 +29,7 @@
     "lodash": "^4.17.21",
     "mongoose": "^6.2.1",
     "mongoose-findorcreate": "^3.0.0",
+    "nutritionix-api": "^1.0.4",
     "passport": "^0.5.2",
     "passport-google-oauth20": "^2.0.0",
     "passport-local": "^1.0.0",
