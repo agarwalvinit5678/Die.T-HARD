@@ -117,6 +117,17 @@ app.get("/profile",function(req,res){
     
     });
 
+app.get("/diary",function(req,res){
+    if(req.isAuthenticated()){
+        
+      res.render("diary",{login_value:req.isAuthenticated()});
+    }
+    else{
+      res.redirect("/");
+    }    
+      
+    });
+  
 app.post("/profile",function(req,res){
   console.log(req.body.gender);
  
