@@ -422,11 +422,12 @@ header{
 }
 #my_container{
     
-  width: 50%;    
-  margin: auto;
+  width: 80%;    
+  margin: 0rem auto -2.3rem auto;
   
   background-color:#CEE6B4;
   color: #444941;
+  
 
 }
 
@@ -539,4 +540,16 @@ display: none;
 .submit-form-btn{
   
   margin: 0.5rem;
+}
+.nutrienttable{
+  margin: 3rem;
+}
+.outputfilecontainer{
+  margin:0rem 1rem;
+  padding:0rem 1rem;
+  border-radius: 3%;
+}
+.outputfilecontainer2{
+ width:80%;
+ border-radius: 1%;
 }
