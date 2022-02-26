@@ -54,7 +54,7 @@ background-height:20px;
 
 
 
-<div class="track">
+<!-- <div class="track">
 
   <button class="but gbut">SUNDAY</button>
   <button class="but gbut">MONDAY</button>
@@ -64,7 +64,7 @@ background-height:20px;
   <button class="but gbut">FRIDAY</button>
   <button class="but gbut ">SATURDAY</button >
 
-    <div >
+    <div > -->
 <!--
 <div class="rotate"><h3>BREAKFAST</h3></div>
 <p1 class="meal"> 3 scrambled egg(1 whole egg) + 3 boiled egg whites +  3 slices toast</p1>
@@ -85,29 +85,103 @@ background-height:20px;
 
   </div>
   -->
-</div>
+<!-- </div> -->
 <!---->
 
-<script src="https://platform.fatsecret.com/js?key=497b94cc80cc47f3b74763458bc04550&auto_load=true&theme=green"></script>
-
-<div id="my_container" class="fatsecret_container"></div>
-
-
-
-
+<div class="nutrienttable">
+  <table class="table">
+ 
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Dish</th>
+        <th scope="col">Bread</th>
+        <th scope="col"></th>     
+        <th scope="col">Protein</th>
+        <th scope="col">Carbohydrate</th>
+        <th scope="col">Fats</th>
+        <th scope="col">Calories</th>
+        <th scope="col">Serving Size</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr>
         
-
+        <th rowspan="3" scope="row">Breakfast</th>
+          <tr>
+              <th rowspan="3" scope="row"><%=bnond%></th>
+              <th rowspan="3" scope="row"><%=bbreadd%></th>
+              <th scope="row">Fullfilled</th>
+              <td><%=bproteinf%></td>
+              <td><%=bcarbohydratef%></td>
+              <td><%=bfatf%></td>
+              <td><%=bcalf%></td>
+              <td><%=bserving%></td>
+            </tr>
+            <tr>
+                      
+              <th scope="row">Required</th>
+              <td><%=bproteinr%></td>
+              <td><%=bcarbohydrater%></td>
+              <td><%=bfatr%></td>
+              <td><%=bcalr%></td>
+              <td></td>
+            </tr>
+      </tr>
+      <tr>
         
-
-
-
+        <th rowspan="3" scope="row">Lunch</th>
+        <tr>
+          <th rowspan="3" scope="row"><%=lnond%></th>
+          <th rowspan="3" scope="row"><%=lbreadd%></th>
+          <th scope="row">Fullfilled</th>
+          <td><%=lproteinf%></td>
+          <td><%=lcarbohydratef%></td>
+          <td><%=lfatf%></td>
+          <td><%=lcalf%></td>
+          <td><%=lserving%></td>
+        </tr>
+        <tr>
+                  
+          <th scope="row">Required</th>
+          <td><%=lproteinr%></td>
+          <td><%=lcarbohydrater%></td>
+          <td><%=lfatr%></td>
+          <td><%=lcalr%></td>
+          <td></td>
+        </tr>
+      </tr>
+      <tr>
         
-<img class="trun med" src="turtle/trun.png" />
-<script>
-  fatsecret.setContainer("my_container");
-  fatsecret.setCanvas("home");
-</script>
-
+        <th rowspan="3" scope="row">Dinner</th>
+          <tr>
+            <th rowspan="3" scope="row"><%=dnond%></th>
+            <th rowspan="3" scope="row"><%=dbreadd%></th>
+            <th scope="row">Fullfilled</th>
+            <td><%=dproteinf%></td>
+            <td><%=dcarbohydratef%></td>
+            <td><%=dfatf%></td>
+            <td><%=dcalf%></td>
+            <td><%=dserving%></td>
+          </tr>
+          <tr>
+                    
+            <th scope="row">Required</th>
+            <td><%=dproteinr%></td>
+            <td><%=dcarbohydrater%></td>
+            <td><%=dfatr%></td>
+            <td><%=dcalr%></td>
+            <td></td>
+          </tr>
+      </tr>
+     
+    </tbody>
+   
+  </table>
+  
+</div>
+<div ><h1 class="divdesclaimer">We Recommend to eat some fruits daily."An Apple a day keeps the doctor away"</h1></div>
 
 
 

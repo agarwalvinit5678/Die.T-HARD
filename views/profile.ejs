@@ -29,16 +29,16 @@
            <form name="profile" method="POST" action="/profile">
              <div class="pl-lg-4">
                <div class="row">
-                 <div class="col-lg-6">
+                 <div class="col-lg-6 ">
                    <div class="form-group focused">
-                     <label class="form-control-label" for="input-name">Name</label>
+                     <label class="form-control-label" for="input-name" required>Name</label>
                      <input type="text" id="input-username" class="form-control form-control-alternative" name="name" placeholder="Name" value="<%= name %> ">
                    </div>
                  </div>
-                 <div class="col-lg-6">
+                 <div class="col-lg-6 ">
                    <div class="form-group">
-                     <label class="form-control-label" for="input-email">Email address</label>
-                     <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="example@domain.com" value="<%= email %> ">
+                     <label class="form-control-label" for="input-email" required>Email address</label>
+                     <input type="email" id="input-email" class="form-control form-control-alternative" name="username" placeholder="example@domain.com" value="<%= email %> ">
                    </div>
                  </div>
                </div>
@@ -47,90 +47,103 @@
              <hr class="my-4">
              
 
-             <div class="pl-lg-4">
+            
                <div class="row">
                 
-                 <div class="col-lg-4">
-          <div class="form-group focused">
-            <label class="form-control-label" for="input-city">State</label>
-            <!--- India states -->
-    <select id="country-state" name="country-state" value="<%state%>">
-    <option  <%= state == "" ? 'selected' : ''%> value="">Select</option>
-    <option <%= state == "AN" ? 'selected' : ''%> value="AN">Andaman and Nicobar Islands</option>
-    <option <%= state == "AR" ? 'selected' : ''%> value="AR">Arunachal Pradesh</option>
-    <option <%= state == "AS" ? 'selected' : ''%> value="AS">Assam</option>
-    <option <%= state == "AP" ? 'selected' : ''%> value="AP">Andhra Pradesh</option>
-    <option <%= state == "BR" ? 'selected' : ''%> value="BR">Bihar</option>
-    <option <%= state == "CH" ? 'selected' : ''%> value="CH">Chandigarh</option>
-    <option <%= state == "CT" ? 'selected' : ''%> value="CT">Chhattisgarh</option>
-    <option <%= state == "DN" ? 'selected' : ''%> value="DN">Dadra and Nagar Haveli</option>
-    <option <%= state == "DD" ? 'selected' : ''%> value="DD">Daman and Diu</option>
-    <option <%= state == "DL" ? 'selected' : ''%> value="DL">Delhi</option>
-    <option <%= state == "GA" ? 'selected' : ''%> value="GA">Goa</option>
-    <option <%= state == "GJ" ? 'selected' : ''%> value="GJ">Gujarat</option>
-    <option <%= state == "HR" ? 'selected' : ''%> value="HR">Haryana</option>
-    <option <%= state == "HP" ? 'selected' : ''%> value="HP">Himachal Pradesh</option>
-    <option <%= state == "JK" ? 'selected' : ''%> value="JK">Jammu and Kashmir</option>
-    <option <%= state == "JH" ? 'selected' : ''%> value="JH">Jharkhand</option>
-    <option <%= state == "KA" ? 'selected' : ''%> value="KA">Karnataka</option>
-    <option <%= state == "KL" ? 'selected' : ''%> value="KL">Kerala</option>
-    <option <%= state == "LA" ? 'selected' : ''%> value="LA">Ladakh</option>
-    <option <%= state == "LD" ? 'selected' : ''%> value="LD">Lakshadweep</option>
-    <option <%= state == "MP" ? 'selected' : ''%> value="MP">Madhya Pradesh</option>
-    <option <%= state == "MH" ? 'selected' : ''%> value="MH">Maharashtra</option>
-    <option <%= state == "MN" ? 'selected' : ''%> value="MN">Manipur</option>
-    <option <%= state == "ML" ? 'selected' : ''%> value="ML">Meghalaya</option>
-    <option <%= state == "MZ" ? 'selected' : ''%> value="MZ">Mizoram</option>
-    <option <%= state == "NL" ? 'selected' : ''%> value="NL">Nagaland</option>
-    <option <%= state == "OR" ? 'selected' : ''%> value="OR">Odisha</option>
-    <option <%= state == "PY" ? 'selected' : ''%> value="PY">Puducherry</option>
-    <option <%= state == "PB" ? 'selected' : ''%> value="PB">Punjab</option>
-    <option <%= state == "RJ" ? 'selected' : ''%> value="RJ">Rajasthan</option>
-    <option <%= state == "SK" ? 'selected' : ''%> value="SK">Sikkim</option>
-    <option <%= state == "TN" ? 'selected' : ''%> value="TN">Tamil Nadu</option>
-    <option <%= state == "TG" ? 'selected' : ''%> value="TG">Telangana</option>
-    <option <%= state == "TR" ? 'selected' : ''%> value="TR">Tripura</option>
-    <option <%= state == "UP" ? 'selected' : ''%> value="UP">Uttar Pradesh</option>
-    <option <%= state == "UT" ? 'selected' : ''%> value="UT">Uttarakhand</option>
-    <option <%= state == "WB" ? 'selected' : ''%> value="WB">West Bengal</option>
-</select>
-</div>
+          <div class="col-md-3 col-xs-6">
+            <div class="form-group focused">
+              <label class="form-control-label" for="input-cuisine">Cuisine</label>
+              <!--- India states -->
+                <select class="dropdownlist" id="" name="cuisine" value="<%cuisine%>" required>
+                <option  <%= cuisine == "" ? 'selected' : ''%> value="">Select</option>
+                <option <%= cuisine == "awadhi" ? 'selected' : ''%> value="awadhi">Awadhi</option>
+                <option <%= cuisine == "bhojpuri" ? 'selected' : ''%> value="bhojpuri">Bhojpuri</option>
+                <option <%= cuisine == "kashmiri" ? 'selected' : ''%> value="kashmiri">Kashmiri</option>
+                <option <%= cuisine == "rajisthani" ? 'selected' : ''%> value="rajisthani">Rajasthani</option>
+                <option <%= cuisine == "hyderabadi" ? 'selected' : ''%> value="hyderabadi">Hyderabadi</option>
+                <option <%= cuisine == "udupi" ? 'selected' : ''%> value="udupi">Udupi</option>
+                <option <%= cuisine == "goan" ? 'selected' : ''%> value="goan">Goan</option>
+                <option <%= cuisine == "bengali" ? 'selected' : ''%> value="bengali">Bengali</option>
+                <option <%= cuisine == "maharashrian" ? 'selected' : ''%> value="maharashrian">Maharashtrian</option>
+                <option <%= cuisine == "assamesse" ? 'selected' : ''%> value="assamesse">Assamesse</option>
+                <option <%= cuisine == "manipuri" ? 'selected' : ''%> value="manipuri">Manipuri</option>
+                </select>
+            </div>
         </div>
-
-               </div>
+       
+      <div class="col-md-2 col-xs-6">
+        <div class="form-group focused">
+          <label class="form-control-label" for="input-goal">Goal</label>
+         
+            <select class="dropdownlist"  name="goal" value="<%goal%>" required>
+            <option  <%= goal == "" ? 'selected' : ''%> value="">Select</option>
+            <option <%= goal == "retain" ? 'selected' : ''%> value="retain">Retain</option>
+            <option <%= goal == "gain" ? 'selected' : ''%> value="gain">Gain</option>
+            <option <%=goal == "lose" ? 'selected' : ''%> value="lose">Lose</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-3 col-xs-6">
+      <div class="form-group focused">
+        <label class="form-control-label" for="input-split" >Split</label>
+       
+          <select class="dropdownlist"  name="split" value="<%split%>" required>
+          <option  <%= split == "" ? 'selected' : ''%> value="">Select</option>
+          <option <%= split == "standard" ? 'selected' : ''%> value="standard">Standard Split</option>
+          <option <%= split == "protein" ? 'selected' : ''%> value="protein">High Protein</option>
+          <option <%=split == "carbohydrate" ? 'selected' : ''%> value="carbohydrate">Low Carb</option>
+          </select>
+      </div>
+  </div>
+  <div class="col-md-3 col-xs-6">
+    <div class="form-group focused">
+      <label class="form-control-label" for="input-activitylevel">Activity Level</label>
+      
+        <select class="dropdownlist"  name="activitylevel" value="<%activitylevel%>" required>
+        <option  <%= activitylevel == "" ? 'selected' : ''%> value="">Select</option>
+        <option <%= activitylevel == "sedentary" ? 'selected' : ''%> value="sedentary">Sedentary</option>
+        <option <%= activitylevel == "lightlyactive" ? 'selected' : ''%> value="lightlyactive">Lightly Active</option>
+        <option <%= activitylevel == "moderatelyactive" ? 'selected' : ''%> value="moderatelyactive">Moderately Active</option>
+        <option <%= activitylevel == "veryactive" ? 'selected' : ''%> value="veryactive">Very Active</option>
+        <option <%= activitylevel == "extraactive" ? 'selected' : ''%> value="extraactive">Extra Active</option>
+        </select>
+    </div>
+</div>
+</div>
+              
                 <hr class="my-4">
                <div class="row">
-                 <div class="col-lg-3">
+                 <div class="col-lg-3 col-xs-6">
                    <div class="form-group focused">
                      <label class="form-control-label" for="input-city">Height</label>
-                     <input type="number" id="input-city" class="form-control form-control-alternative" name="height" placeholder="Height (cms)" value=<%=height%>>
+                     <input type="number" id="input-city" class="form-control form-control-alternative" required name="height" placeholder="Height (cms)" value=<%=height%>>
                    </div>
                  </div>
-                 <div class="col-lg-3">
+                 <div class="col-lg-3 col-xs-6">
                    <div class="form-group focused">
                      <label class="form-control-label" for="input-country">Weight</label>
-                     <input type="number" id="input-country" class="form-control form-control-alternative" name="weight" placeholder="Weight (kg)" name="weight" value=<%= weight %>>
+                     <input type="number" id="input-country" class="form-control form-control-alternative" required name="weight" placeholder="Weight (kg)" name="weight" value=<%= weight %>>
                    </div>
                  </div>
-                 <div class="col-lg-3">
+                 <div class="col-lg-3 col-xs-6">
                    <div class="form-group focused">
                      <label class="form-control-label" for="input-age">Age</label>
-                     <input type="number" id="input-age" class="form-control form-control-alternative" name="age"placeholder="Age(years)" value=<%=age%>>
+                     <input type="number" id="input-age" class="form-control form-control-alternative" required name="age"placeholder="Age(years)" value=<%=age%>>
                    </div>
                  </div>
 
-                 <div class="col-lg-3 ">
+        <div class="col-lg-3 col-xs-6 ">
           <div class="form-group focused">
-            <label class="form-control-label" for="input-city">Gender</label>
+            <label class="form-control-label" for="input-city"  >Gender</label>
             <!--- Gender -->
-<select id="gender" name="gender">
-    <option <%= gender == "" ? 'selected' : ''%> value="">Select</option>
-    <option <%= gender == "M" ? 'selected' : ''%>value="M">Male</option>
-    <option <%= gender == "F" ? 'selected' : ''%>value="F">Female</option>
-    <option <%= gender == "O" ? 'selected' : ''%>value="O">Other</option>
+            <select class="dropdownlist" name="gender" value="<%= gender %>" required>
+              <option <%= gender == "" ? 'selected' : ''%> value="">Select</option>
+              <option <%= gender == "M" ? 'selected' : ''%> value="M">Male</option>
+              <option <%= gender == "F" ? 'selected' : ''%> value="F">Female</option>
+              <option <%= gender == "O" ? 'selected' : ''%> value="O">Other</option>
 
-</select>
-</div>
+            </select>
+          </div>
         </div>
 
 
@@ -140,32 +153,32 @@
                 <label class="form-control-label" for="input-city">Common Allergies</label>
                <div class="list-group list-group-horizontal-md">
                  <label class="list-group-item">
-                   <input class="form-check-input me-1" name="allergens" type="checkbox" value="Gluten">
+                   <input <%= allergens.includes("Gluten") ? 'checked' : ''%> class="form-check-input me-1" name="allergens" type="checkbox" value="Gluten">
                    Gluten
                  </label>
 
                  <label class="list-group-item">
-                   <input class="form-check-input me-1" name="allergens" type="checkbox" value="Eggs">
+                  <input <%= allergens.includes("Eggs") ? 'checked' : ''%> class="form-check-input me-1" name="allergens" type="checkbox" value="Eggs">
                   Eggs
-                 </label>
+                </label>
                  <label class="list-group-item">
-                   <input class="form-check-input me-1" name="allergens" type="checkbox" value="Fish">
+                   <input <%= allergens.includes("Fish") ? 'checked' : ''%> class="form-check-input me-1" name="allergens" type="checkbox" value="Fish">
                    Fish
                  </label>
                  <label class="list-group-item">
-                   <input class="form-check-input me-1" name="allergens" type="checkbox" value="Nuts">
+                   <input <%= allergens.includes("Nuts") ? 'checked' : ''%> class="form-check-input me-1" name="allergens" type="checkbox" value="Nuts">
                   Nuts
                  </label>
                  <label class="list-group-item">
-                   <input class="form-check-input me-1" name="allergens" type="checkbox" value="Dairy">
+                   <input <%= allergens.includes("Dairy") ? 'checked' : ''%> class="form-check-input me-1" name="allergens" type="checkbox" value="Dairy">
                   Dairy
                  </label>
                  <label class="list-group-item">
-                   <input class="form-check-input me-1" name="allergens" type="checkbox" value="Soy">
+                   <input <%= allergens.includes("Soy") ? 'checked' : ''%> class="form-check-input me-1" name="allergens" type="checkbox" value="Soy">
                   Soy
                  </label>
                  <label class="list-group-item">
-                   <input class="form-check-input me-1" name="allergens" type="checkbox" value="ShellFish">
+                   <input <%= allergens.includes("ShellFish") ? 'checked' : ''%> class="form-check-input me-1" name="allergens" type="checkbox" value="ShellFish">
                    Shell Fish
                  </label>
                </div>
