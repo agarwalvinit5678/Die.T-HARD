@@ -494,7 +494,7 @@ header{
     margin-top: 4%;
     margin-right: 10%;
     margin-left: 10%;
-    padding:3rem 2rem 4rem 2rem;
+    /* padding:3rem 2rem 4rem 2rem; */
 
 }
 #rcorners1{
@@ -514,11 +514,16 @@ header{
 }
 
 .piechart1{
+  position: absolute;
   align-items: center;
-  margin-left: 26%;
+  margin-left: 32%;
   margin-right: 26%;
-  margin-top: 10%;
+  margin-top: 3%;
+  
 }
+#piechart{
+  margin-top: 3rem;;
+  }
 @media only screen and (max-width: 900px) {
   .med2{
 display: none;
@@ -530,13 +535,13 @@ display: none;
 display: none;
 }
 .piechart1{
-  margin: 0rem auto 0rem auto;
+  position: relative;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 }
-.profilecard{
-  padding:0rem;
-  width:auto;
-}
+
 .submit-form-btn{
   
   margin: 0.5rem;

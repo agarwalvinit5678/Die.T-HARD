@@ -1,4 +1,12 @@
 <%- include('partials/header') %>  
+
+<div class="dropdown">
+  <a href="/profile" class="activitybutton dropbtn">
+       ACTIVITY LEVEL
+  </a>
+  
+</div>
+<div style="overflow:scroll; height:100%;overflow: hidden;">
   <body class="imgbg" background="images/bgg.png" style="background-color: #D5EEBB;"  >
 
 
@@ -10,43 +18,19 @@
 <img class="dumb med" src="turtle/tpizza1.png" alt=""  width="500" height="600">
 <img class="med2 "src="turtle/tpizza2.png" alt="">
 
-<div class="nav2">
-  <ul>
-    <!-- <li class="sidebutton gbutton"><button  onclick="window.location.href='page'" type="button">Edit Goals</button></li> -->
-
-    <!-- <li class="sidebutton gbutton"><button type="button">Button</button></li> -->
-  </ul></div>
-
-<!--
 
 
 
 
-  ACTIVITY LEVEL
-
-kanishka add kardio onclick karke
 
 
-
--->
-
-
-
-
- <div class="dropdown">
-    <a href="/profile" class="activitybutton dropbtn">
-         ACTIVITY LEVEL
-    </a>
-    
-  </div>
-
-<!-- <div >
+<!-- 
    <h1 class="heading">
-     REquired daily caloric constrain to achieve desired goal.
-   </h1>
+     Rquired daily caloric constrain to achieve desired goal.
+   </h1> -->
 
 
-</div> -->
+
 
 <div id="piechart" class="piechart1">
 
@@ -62,10 +46,10 @@ kanishka add kardio onclick karke
   function drawChart() {
     var data = google.visualization.arrayToDataTable([
     ['Nutrients', 'per Day'],
-  ['Carbohydrate', 9],
-  ['Fats', 8],
-  ['Proteins', 2],
-  ['Others', 2],
+  ['Carbohydrate', <%=carbohydrate%>],
+  ['Fats', <%=fat%>],
+  ['Proteins', <%=protein%>],
+  // ['Others', 2],
   ]);
 
     // Optional; add a title and set the width and height of the chart
@@ -79,6 +63,6 @@ kanishka add kardio onclick karke
 
 </div>
 
-
+</div>
 
 <%- include('partials/footer') %>  
