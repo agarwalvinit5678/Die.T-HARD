@@ -9,13 +9,19 @@ const bodyParser=require("body-parser");
 
 Object.values(regionalFoodItems).forEach(region=>{
     console.log();
-    console.log(region);
-    Object.values(region).forEach(dish=>{
-        console.log(dish);
+    
+        Object.values(region).forEach(dish=>{
+
+            Object.values(dish).forEach(foodCategory=>{
+                console.log(foodCategory);
+        
+                
                 
                 
             
         
+            })
+                
         })
 });
 
