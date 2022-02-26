@@ -1,5 +1,4 @@
 //jshint esversion:6
-
 require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -252,12 +251,12 @@ app.get("/tracker",function(req,res){
     console.log(bbreaddish.calories);
 
     res.render("tracker",{login_value:req.isAuthenticated(),
-      bbreadd:breadobj[bbreaddish].name,
-      bnond:nonbreadobj[bnondish].name,
-      lbreadd:breadobj[lbreaddish].name,
-      lnond:nonbreadobj[lnondish].name,
-      dbreadd:breadobj[dbreaddish].name,
-      dnond:nonbreadobj[dnondish].name,
+      bbreadd:breadobj[bbreaddish].name.toUpperCase(),
+      bnond:nonbreadobj[bnondish].name.toUpperCase(),
+      lbreadd:breadobj[lbreaddish].name.toUpperCase(),
+      lnond:nonbreadobj[lnondish].name.toUpperCase(),
+      dbreadd:breadobj[dbreaddish].name.toUpperCase(),
+      dnond:nonbreadobj[dnondish].name.toUpperCase(),
       bserving:bservingsize,
       lserving:lservingsize,
       dserving:dservingsize,
